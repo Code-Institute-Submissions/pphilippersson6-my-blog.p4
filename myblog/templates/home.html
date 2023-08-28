@@ -1,2 +1,8 @@
-<h1>Hello World! This is a text for my Blog!</h1>
-<h3> test </h3>
+<h1>Post</h1>
+
+<ul>
+{% for post in object_list %}
+    <li>{{ post.title }} - {{ post.author }}<br/>
+    {{ post.body }}</li>
+{% endfor%}
+</ul>
