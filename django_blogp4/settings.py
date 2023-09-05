@@ -126,7 +126,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL = 'home'
-LOGINOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Define the absolute path to the directory where collectstatic will copy static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
