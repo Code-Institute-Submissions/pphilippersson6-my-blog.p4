@@ -14,8 +14,8 @@ class HomeView(ListView):
     ordering = ['-post_date']
 
 def CategoryView(request, categ):
-    category_posts = Post.objects.filter(category=categ)
-    return render (request, 'categories.html', {'categ':categ.title(), 'category_posts':category_posts})
+    category_posts = Post.objects.filter(category=categ.replace('-', ' '))
+    return render (request, 'categories.html', {'categ':categ.title().replace('-', ' '), 'category_posts':category_posts})
 
 class ArticleDetailView(DetailView):
     model = Post
