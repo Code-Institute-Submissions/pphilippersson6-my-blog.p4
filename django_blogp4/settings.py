@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  
 
-ALLOWED_HOSTS = ['8000-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com', '8001-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com']
 
 
 # Application definition
