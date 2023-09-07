@@ -13,6 +13,12 @@ class HomeView(ListView):
     template_name = 'home.html'
     ordering = ['-post_date']
 
+    def get_context_data(self, *args, **kwargs):
+        categ_menu = Category.objects.all()
+        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context["categ_menu"] = categ_menu
+        return context
+
 def CategoryView(request, categ):
     category_posts = Post.objects.filter(category=categ.replace('-', ' '))
     return render (request, 'categories.html', {'categ':categ.title().replace('-', ' '), 'category_posts':category_posts})
