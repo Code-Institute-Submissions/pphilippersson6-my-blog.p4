@@ -19,6 +19,10 @@ class HomeView(ListView):
         context["categ_menu"] = categ_menu
         return context
 
+def CategoryListView(request):
+    categ_menu_list = Category.objects.all()
+    return render (request, 'category_list.html', {'categ_menu_list':categ_menu_list})
+
 def CategoryView(request, categ):
     category_posts = Post.objects.filter(category=categ.replace('-', ' '))
     return render (request, 'categories.html', {'categ':categ.title().replace('-', ' '), 'category_posts':category_posts})
@@ -27,6 +31,11 @@ class ArticleDetailView(DetailView):
     model = Post
     template_name = 'blogpost_details.html'
 
+    def get_context_data(self, *args, **kwargs):
+        categ_menu = Category.objects.all()
+        context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
+        context["categ_menu"] = categ_menu
+        return context
 
 class AddPostView(CreateView):
     model = Post
