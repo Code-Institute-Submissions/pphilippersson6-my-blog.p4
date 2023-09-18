@@ -94,7 +94,7 @@ so that **I can create a web application that handles media uploads and serves t
 * Pages are the following:
     * **Navbar**
     The navbar is structured up very easy for the user, with a button and the header "**My Blog**", dropdown menu with "**categories**", where all the blog-categories are stored. A "**Register**" button for new users, and a "**Login**" button for the ones with registerd accounts already.
-    ![navbar as logged out](static/readme_images/navbar logged out.png)
+    ![navbar_as_logged_out](static/readme_images/navbar_logged_out.png)
     
     * If the user is logged in, the navbar says: same "**My Blog**" button, and "**Categories**" dropdown menu, but then we come to the "**Add Post**" followed by "**Add Category**" since you can do this stuff as logged in. To the right, we find another dropdown menu, where the user sees the profile-name, the dropdown menu has 4 links. "**User settings**", "**Edit Profile Page**", "**Show profile page**" and a "**Logout**" button. !!!! image logged in
     
