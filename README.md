@@ -282,26 +282,3 @@ Deployment to Heroku can be done with the following guideline:
 ## **Libraries and other credits**
 This projects are inspired by:
 ALLA MINA CREDIT LÄNKSR HÄR
-
-
-
-
-## Getting Started
-
-
-Explain how to set up your Django project locally. Make sure to include any prerequisites and detailed installation instructions.
-
-### Prerequisites
-
-List any software or tools that users need to have installed before setting up your project. For example:
-
-- Python 3.x
-- Django
-- ...
-
-### Installation
-
-1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/yourusername/your-django-project.git
