@@ -200,7 +200,7 @@ total_likes(): A method that returns the total number of likes on the post.
 ## **Design**
 
 * **Wireframe**
-    * skeleton-design for my blog [here](static/readme_images/WIREFRAME.png).
+* A skeleton-design for my blog [here](static/readme_images/WIREFRAME.png).
 
 ## **Color Design**
  * Navbar color is used from the bootstrap
@@ -293,38 +293,10 @@ The HTML was validated using
 
 ## Lighthouse
 - The google chrome has a very good built-in performance-tool that is called Lighthouse.
-This was used on my website, and i got a performance on 83/100.
-- It showed an error message "form elements do not have associated labels",
-and also a error message "document does not have a meta description" 
+  OK results, but unfortunatly CodeAnywhere are slowing down my rating on performace (prestanda)
 
-![Lighthouse performance](readme-assets/lighthouse-performance83.PNG)
-
-![Error form-element](readme-assets/form-element-error.PNG)
-
-![No meta desctiption](readme-assets/metadescription.PNG)
-
-- I invesitgated my HTML and found out very quick that i forgot to put a label in my code.
-So instead of my <span>, i placed a <label>, and a **for** attribute for every option.
-- Afterwards, i checked the meta description, and found out i forgot to add the keywords and a description on top of my HTML file [index.html].
-
-- I ran the lighthouse again, and got a much better result. The game was validated to a 100/100 score in Accessibillity. 
-
-![Lighthouse fixed accessibility](readme-assets/performance-fixed.png)
-
-## Wave
-- Wave is a tool to check the accessibillity on the site. 
-Here did i only get one "error"/"alert". This is an error where your text is supposed to be a header, but are not one.
-i had wrapped my score in a <p>, instead of a <h5> element.
-
-![Error message](readme-assets/heading-helement-fix-message.png)
-
-![Error message displayed on website](readme-assets/heading-helement-fix.png)
-
-This was fixed very easy by swapping out the <p> to a <h5>. And the error has ben removed. You can see that the image below shows an h5 instead.
-
-![Error-fixed](readme-assets/heading-helement-fix-done.png)
-
-
+![Lighthouse_performance_mobile](static/readme_images/weblighthouse.PNG)
+![Lighthouse_performance_website](static/readme_images/mobilelighthouse.PNG)
 
 ## **Code Validation**
 
@@ -338,7 +310,7 @@ This was fixed very easy by swapping out the <p> to a <h5>. And the error has be
 
 * **JSHint validator**
 
-    * No custom JavaScript code has been written for this project, only what is included with Bootstrap4. 
+    * No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
 
 * **Python Validator**
 
@@ -433,5 +405,26 @@ By following these steps, you'll successfully deploy your project to Heroku, tak
 
 
 ## **Libraries and other credits**
-This projects are inspired by:
-ALLA MINA CREDIT LÄNKSR HÄR
+
+### Content
+* [Code institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/) for inspiration, and help with readmefile
+  
+* [Code institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) for help with installations
+  
+* [pep8 checker](https://pep8ci.herokuapp.com/) for checking my code for errors.
+  
+* [Build fullstack booking app](https://www.youtube.com/watch?v=MpQbwtSiZ7E&ab_channel=CodingWithDawid) for helping me with the inspiration and structure of the site.
+  
+* [Am I Responsive](https://ui.dev/amiresponsive) for a nice layout in my readme file.
+  
+* [Heroku](https://heroku.com/) for deploying/storing/helps run the project.
+  
+* [Github](https://github.com) for deploying/storing/helps run the project.
+  
+* [Github_repo](https://github.com/pphilippersson6/battleship-game/edit/main/README.md) my own game, gave me inspiration and a template for the readme file.
+  
+* [Bootstrap](https://getbootstrap.com/) for the design and simple layout on site.
+  
+* [ElephantSQL](https://www.elephantsql.com/) for the database host service.
+
+* [Django info](https://docs.djangoproject.com/en/4.2/) for information to learn about django.
