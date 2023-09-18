@@ -212,8 +212,20 @@ total_likes(): A method that returns the total number of likes on the post.
 
 
 ## **Existing features**
+* Create, edit/delete a post
+* like/unlike, and comment posts
+* create a user
+* add user bio
+* add categories
+* edit user settings
+* show profile page
+* login/out
+
 
 ## **Features to implement in the future**
+* answer on comments
+* send messages to users
+* rate posts
 
 ## **CRUD Operations**
 
@@ -273,26 +285,15 @@ The languages used for this site are:
 
 * Testing for accessibility and performance is made from Google Chrome extention, called Lighthouse extension:
 
-    * For Desktop:
-    IMAGE PÅ RESULATAT 
-
-    * For Mobile devices:
-    IMAGE PÅ RESULTAT
-
 ## Validator Testing 
-The HTML was validated using 
+  *  [W3C Validator](https://validator.w3.org/) for checking validation for HTML.
 
-![W3C HTML Validator](readme-assets/html-validator.PNG) 
-
-- My JavaScript was validated, without errors with 
-
-![ExtendsClass](readme-assets/JS-validator.png)
-- CSS showed no errors aswell, and validated with 
-
-![Jigsaw W3C Validator](readme-assets/css-validator.PNG)
+* [Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator/) for checking validation for CSS.
+  
+* [Wave Webaim](https://wave.webaim.org/) was used to check the content to users with disabilities. 
 
 ## Lighthouse
-- The google chrome has a very good built-in performance-tool that is called Lighthouse.
+  * The google chrome has a very good built-in performance-tool that is called Lighthouse.
   OK results, but unfortunatly CodeAnywhere are slowing down my rating on performace (prestanda)
 
 ![Lighthouse_performance_mobile](static/readme_images/weblighthouse.PNG)
@@ -310,7 +311,7 @@ The HTML was validated using
 
 * **JSHint validator**
 
-    * No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
+* No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
 
 * **Python Validator**
 
@@ -320,8 +321,17 @@ The HTML was validated using
 # **Bugs during development**
 
 ## **Fixed bugs and solutions:**
+The navbar dropdown was smushed into the corner. But was easily fixed with bootstrap.
 When using smaller screens, the navigation bar felt quite chunky and took up a lot of the screen. navbar dropdown menu fixed
-KOLLA GP CHAT frågor
+
+![error](static/readme_images/errorhtml_typo_error-_nt.png)
+this error did also show up, and it was hard to see the problem.
+I started to look at my links, and found out 
+![found_error](static/readme_images/error_typo_code_int.png)
+
+I was missing a '<', and fixed the issue very easy with this solution 
+![solved](static/readme_images/error_typo_code int_corrected.png)
+
 
 ## **Ongoing bugs:**
 
@@ -428,3 +438,16 @@ By following these steps, you'll successfully deploy your project to Heroku, tak
 * [ElephantSQL](https://www.elephantsql.com/) for the database host service.
 
 * [Django info](https://docs.djangoproject.com/en/4.2/) for information to learn about django.
+  
+* [W3C Validator](https://validator.w3.org/) for checking validation for HTML.
+
+* [Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator/) for checking validation for CSS.
+  
+* [ExtendsClass](https://extendsclass.com/javascript-fiddle.html) to validate my JavaScript.
+  
+* [Wave Webaim](https://wave.webaim.org/) was used to check the content to users with disabilities. 
+  
+* The font is from [Google Fonts](https://fonts.google.com/).
+  
+* The wireframe is designed & created in [Miro](https://miro.com/).
+  
