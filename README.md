@@ -57,14 +57,78 @@ This blog is open to all, fostering a sense of community and collaboration. Whet
 ## **Project Scope**
 
 * **Functionality**
+    * To be able to sign-up using usernname, and a password
+    * To be able to login/logout of the account
+    * To be able to add, edit, delete, like posts as logged in
+    * To be able to view posts, and bios of users
+    * To be able to comment posts
+    * To be able to edit user settings such as password
+    * To be able to add categories as a user
 
-## **Strategy**
+* **Content requirments**
+    * Clear, consistant info how to use the website
+    * Easy navigation as nav-bar to guide the user
+    * Simple form to make the user cofident to post
+    * Responsive website that responds to the user
 
 ## **User Stories**
+
+* As a **developer** getting started with **web development** using Django and Cloudinary, I want to install Django, set up a basic project, and integrate Cloudinary for media management
+so that **I can create a web application that handles media uploads and serves them efficiently**
+* As a new **user**, I wantto be able to create an account by providing my email address and a secure password so that **I can access the features of the blog**
+* As a **registered user**, I want **to be able to log in using my email and password** so that **so that I can access my profile and interact with the blog**
+* As a **logged-in user** I  want to **be able to create a new blog post** by providing  **a title, content, and optionally adding images or media**
+* As a **logged-in user who created a post** I can **edit or delete my own posts** if in case **I need to make changes or remove outdated content**
+* As a **user** I expect  **the blog to be responsive, and easily accessible on all kind of devices** so that **everyone can use the blog**
+* As a **user**, I can update my profile information so that I can modify my user profile dashboard/information, like settings, name and so on
+* As a **user**, I can comment, and like the blogposts, and also see how many likes I got on my posts
+* As a **user**, I can add new categories, to implement it for my posts
+* As a **first-time site visitor**, I can view a post and I can get information about the user who published the post
+* As a **first-time site visitor**, I can view a landingpage/homepage so that I can get information about a website's purpose
+* As a **first-time site visitor**, I can comment, and like the blogposts, and also see how many likes the user got on its post
+* As an **admin**, I can view user profile information so that I can modify any needed user details or delete users.
+* As an **admin**, I can access an admin profile so that I can create, edit and delete users, or edit them.
+
 
 # **Design**
 
 ## **Website Structure**
+
+* The website is structured into 9 principal pages
+* All of the pages extend the same base, therefore producing a consistent style across the web-app
+* Pages are the following:
+    * **Navbar**
+    The navbar is structured up very easy for the user, with a button and the header "**My Blog**", dropdown menu with "**categories**", where all the blog-categories are stored. A "**Register**" button for new users, and a "**Login**" button for the ones with registerd accounts already. 
+    !!IMAGE LOGGED OUT
+    * If the user is logged in, the navbar says: same "**My Blog**" button, and "**Categories**" dropdown menu, but then we come to the "**Add Post**" followed by "**Add Category**" since you can do this stuff as logged in. To the right, we find another dropdown menu, where the user sees the profile-name, the dropdown menu has 4 links. "**User settings**", "**Edit Profile Page**", "**Show profile page**" and a "**Logout**" button. !!!! image logged in
+    
+    * **Footer**
+    The footer is a simple footer with copyright text, and 3 icons linked to social medias.
+
+    * **Homepage**
+    Here can we see the most recent posts for the blog.
+    We have a link to the post itself, and also links to the category.
+
+    * **Categories**
+    In the category navbar, we see all the categories created by the users.
+    If we post a blogpost, and we use the category, it will appear under its correct category.
+    BILD PÅ KATEGORI MED NÅÅGOT I
+    
+    * **Register** 
+    This is a simple register form for the user to use, and it is created to assign a post by the user.
+    Here, we want a username, first/last name, an email and a password.
+    BILD PÅ REGISTER SIDAN
+
+    * **Login**
+    Here is a simple loginpage with username and password required. 
+    If you dont have created an account yet, you can press the hyperlink Sign up Here, to get to the register page.
+
+    Biuld på LOGIN!!!
+
+    ### As a logged in user
+    
+    * **Add Post**
+    We can add a post, and then we enter a title, a title tag, 
 
 ## **Relational Database Diagram**
 
