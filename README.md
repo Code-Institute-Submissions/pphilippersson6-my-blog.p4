@@ -128,32 +128,117 @@ so that **I can create a web application that handles media uploads and serves t
     ### As a logged in user
     
     * **Add Post**
-    We can add a post, and then we enter a title, a title tag, 
+    We can add a post, and then we enter a title, a title tag, choose a category that fits the post, and in the body, we type whatever we want to share!
+    Then, we can post a header image. And then type a snippet for our post!
+    ADD IMG ADD POST
 
-## **Relational Database Diagram**
+    * **Add Category**
+    Very simple page, where you can add a category of anything, and it will appear in the **Categories** list aswell.
 
-## **Design Diagram**
+    ADD CATEGORT IMG
+
+    * **Edit page**
+    Edit/Delete a post as the user who created the page!
+
+    * **Edit Profile**
+    Here, you can edit your profile in the edit profile section
+    BUILD PÅ EDIT
+
+    * **Show Profile**
+    Here, a user can see the profile name, and information like bio, and profile picture.
+
+    * **User settings**
+    Is where you can edit username, email, see your last login, and if youre an admin, is active, or something like that.
+    
+## **Relational Database**
+
+* The project uses a relational database called [PostgreSQL](https://www.elephantsql.com/)
+
+**Models**
+
+* **User**
+    * The User model contains information about each user that registers an account
+    * It is part of the Django allauth library
+    * username: The unique username chosen by the user for their account.
+    * email: The email address associated with the user's account. This is used for account verification and communication.
+    * password: The hashed password stored securely for user authentication.
+
+
+* **Profile**
+  * user: A one-to-one relationship with the User model, linking each profile to a specific user.
+  * bio: A text field where users can provide a short bio or description about themselves.
+  * profile_pic: An optional image field for users to upload a profile picture.
+  * website_url: A URL field where users can provide a link to their personal website (optional).
+  * facebook_url: A URL field for the user's Facebook profile (optional).
+  * twitter_url: A URL field for the user's Twitter profile (optional).
+  * instagram_url: A URL field for the user's Instagram profile (optional).
+  * linkedin_url: A URL field for the user's LinkedIn profile (optional).
+  
+* **Post**
+  * title: The title of the blog post.
+  * header_image: An optional image field for a header image for the post.
+  * title_tag: A short tagline or description for the post.
+  * author: A foreign key relationship to the User model, indicating the author of the post.
+  * body: A rich text field where the content of the post is stored (supports formatting).
+  * post_date: The date when the post was created (auto-generated).
+  * category: The category to which the post belongs (default is 'uncategorized' if not specified).
+  * snippet: A short snippet or excerpt from the post.
+  * likes: A many-to-many relationship with the User model, representing users who have liked the post.
+    
+  * Additional Method: total_likes(): A method that returns the total number of likes on the post.
+
+total_likes(): A method that returns the total number of likes on the post.
+
+* **Comment**
+  * post: A foreign key relationship to the Post model, indicating the post on which the comment is made.
+  * name: The name of the commenter.
+  * body: The content of the comment.
+  * date_added: The date and time when the comment was added (auto-generated).
+
+## **Design**
+
+* **Wireframe**
+    * Design for landing page can be seen [here](/documents/readme_im/index.jpg).
+    * Design for event page can be seen [here](/documents/readme_imavent.jpg).
+
 
 ## **Color Design**
+ * Navbar color is used from the bootstrap
+ * The footer is also from bootstrap color #3e4551;, along with the icons at the footer. 
+ 
 
 # **Features**
 
-List the key features of your Django project. This section can help potential users understand what your project can do.
+
 ## **Existing features**
 
 ## **Features to implement in the future**
 
 ## **CRUD Operations**
+| **Operations** | All users | Auth. Users | Superusers |
+| --- | --- | --- | --- |
+| **View Home Page** | Yes | Yes | Yes |
+| **Create Blogposts** | No | Yes | Yes |
+| **Comment** | Yes | Yes | Yes |
+| **Like** | No | Yes | Yes |
+| **Add Category** | No | Yes | Yes |
+| **Edit/Delete Post** | No | Yes | Yes |
+| **Add/Edit/Delete Profile** | No | No | Yes |
+| **Login** | No | Yes | Yes |
+| **Register** | Yes | No | No |
 
 # **Data Validation**
-
+ * All empty input upon making a profile have default placeholders to inform user of requirements.
+ * All input fields are required before updating profile information.
+ * System will not allow non-registered users to create an account with a conflictive username or email.
+ * System does not accept any username or password that is non-existent or incorrect.
 
 
 # **Technologies and libraries used**
 
 ## **Languages**
 
-The languages used are:
+The languages used for this site are:
 
 * [HTML](https://html.spec.whatwg.org/multipage/)
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
@@ -163,37 +248,25 @@ The languages used are:
 ## **Database Platform and Cloud Storage**
 
 REDIGERA DENNA TILL MIN EGNA TEXT..-----
-* [ElephantSQL Postgres](https://www.elephantsql.com/): SQL database service provided by ElephantSQL for data storage.
-* [SQLite](https://www.sqlite.org/index.html): SQL database engine used by default as part of Django Framework and used during development.
-* [Cloudinary](https://cloudinary.com/home-102622): to store images and static files.
-* [Heroku](https://id.heroku.com/login): to deploy and run the application.
+* [ElephantSQL Postgres](https://www.elephantsql.com/)
+  This is a SQL database service offered by ElephantSQL, which we use to store and manage our data. It provides a reliable and scalable database solution for our application.
+* [SQLite](https://www.sqlite.org/index.html)
+  During the development of our application, we use SQLite as our SQL database engine. It's the default database engine that comes with the Django Framework. SQLite is lightweight and perfect for development purposes.
+* [Cloudinary](https://cloudinary.com/home-102622)
+  We utilize Cloudinary to handle the storage of images and static files in our application. Cloudinary offers a convenient and efficient way to store and manage media assets.
+* [Heroku](https://id.heroku.com/login)
+  Our application is deployed and hosted on Heroku. It's a cloud platform that allows us to run and manage our web application in a production environment. Heroku makes it easy to deploy, scale, and maintain our application.
 
 # **Testing**
 
 ## **Introduction**
 
-* Site has been continuously tested throughout development stages using the following features:
-    * Python terminal for backend functionalities
-    * Google Developer Tools 
-    * Manual Testing
-    * Automated Testing
+  Throughout the development stages of the website, we have conducted rigorous testing to ensure its quality and reliability. This testing process involved various methods and tools, including:
+  * Python Terminal for Backend Functionalities: We extensively used the Python terminal to test and validate the functionality of the backend of our website. This allowed us to interact directly with the backend components and ensure they were working as intended.
+  * Google Developer Tools: Google Developer Tools played a crucial role in our testing process. It helped us inspect and debug the website's frontend components, ensuring that they were rendering correctly and functioning smoothly.
+  * Manual Testing: Our team conducted thorough manual testing, where we interacted with the website as end-users would. This hands-on approach allowed us to identify any user interface issues, navigation problems, or functional glitches.
   
-## **Testing User Stories**
-
-## **Automated Testing**
-REDIGERA MIN EGNA TEXT-------
-
-* 19 automated tests have been implemented.
-* Automated tests were carried out during the creation of website functions and classes.
-* The tool use to measure coverage of code was the Coverage.py tool.
-* To check coverage in the HTML format run in the terminal:
-    * `coverage run --source=appname manage.py test`
-    * `coverage html`
-    * Run `python3 -m http.server` (in case there is a server already running, enter `python3 -m http.server 8080`, for example).
-    * Live server should be running with a list of HTML options.
-    * Pick 'htmlcov/'.
-
-
+  By employing this comprehensive testing strategy, we have ensured that our website meets the highest standards of quality and provides an exceptional user experience.
 
 ## **Testing Accessibility and Performance**
 
@@ -256,13 +329,11 @@ This was fixed very easy by swapping out the <p> to a <h5>. And the error has be
 
 * **W3C HTML Code Validator**
 
-    * Each page of the deployed website was run through the [HTML Markup Validation Service](https://validator.w3.org/) and returned no errors.
+ * Each page of the deployed website was run through the [HTML Markup Validation Service](https://validator.w3.org/) and returned no errors.
 
 * **W3C CSS Jigsaw Validator**
 
     * CSS code was tested with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) via direct input and returned no errors.
-
-    ![css-validator](/documents/readme_images/css%20validator%20.jpg)
 
 * **JSHint validator**
 
@@ -282,65 +353,82 @@ KOLLA GP CHAT frågor
 ## **Ongoing bugs:**
 
 # **Development and deployment**
-EGNA ORD NEDAN!!!
-The development environment used for this project was GitPod. Regular commits and pushes to Github have been employed to be able to track and trace the development process of the website. The Gitpod environment for this particular project was created using a template provided by Code Institute.
+Throughout the development of this project, we utilized GitPod as our primary development environment. We maintained a disciplined approach by consistently committing and pushing our code to GitHub. This version control process allowed us to meticulously track and document the evolution of our website's development. It's worth noting that our GitPod environment was established using a template thoughtfully provided by Code Institute.
 
-For local deployments instructions shall be written below, along with instructions with deployment to Heroku, the hosting service used to deploy this particular website. Heroku was chosen as the hosting service due to its database maintenance capabilities. 
-
-
+For users who wish to deploy this website locally, we will provide detailed instructions below. Additionally, we'll outline the steps required for deploying the website to Heroku, our chosen hosting service. We opted for Heroku primarily because of its robust database management capabilities, which align seamlessly with the needs of our website.
 
 ## **Local Deployment**
-EGNA ORD!!!!!
 
-This repository can be cloned and run locally with the following steps:
+1. GitHub Login: Begin by logging into GitHub.
 
-1. Login to [GitHub](https://www.github.com).
-2. Select repository named: [keironchaudhry/p4-lingomeets](https://github.com/keironchaudhry/p4-lingomeets).
-3. Click code toggle button and copy the url (i.e., https://github.com/keironchaudhry/p4-lingomeets.git).
-4. In your IDE, open terminal and run the git clone command (i.e., git clone https://github.com/keironchaudhry/p4-lingomeets.git).
-5. The repository will now be cloned in your workspace.
-6. Create an [env.py file](https://dev.to/jakewitcher/using-env-files-for-environment-variables-in-python-applications-55a1) (this file should normally be included in .gitignore, therefore it'll not be committed publicly in the root folder of your project) and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values. For example:
+2. Select Repository: Locate and select the repository titled pphilippersson6/my-blog.p4
 
-`import os`
+3. Copy Repository URL: Click on the "Code" toggle button within the repository and copy the URL (e.g., https://github.com/pphilippersson6/my-blog.p4.git).
 
-`os.environ['SECRET_KEY'] = 'ADDED_BY_YOU'`
+4. Clone the Repository: In your integrated development environment (IDE), open the terminal and execute the git clone command using the copied URL (e.g., git clone https://github.com/pphilippersson6/my-blog.p4.git).
 
-`os.environ['DATABASE_URL'] = 'ADDED_BY_YOU'`
+5. Repository Cloned: This action will clone the repository into your working environment.
 
-`os.environ['CLOUDINARY_URL'] = 'ADDED_BY_YOU'`
+6. Create the env.py File: Generate an env.py file and include it in the project's root folder. This file should typically be included in .gitignore to prevent public exposure. Add the following code to the env.py file, ensuring that you provide the relevant key-value pairs with correct values:
 
-7. Install the relevant packages as per the requirements.txt file
-8. In `settings.py` file, ensure the connection is set to either the Heroku Postgres Database or the local SQLite database
-9. Ensure debug is set to true in the `settings.py` file for local development
-10. Add localhost/127.0.0.1 to the ALLOWED_HOSTS variable in `settings.py`
-11. Run `python3 manage.py showmigrations` to check the status of the migrations
-12. Run `python3 manage.py migrate` to migrate the database
-13. Run `python3 manage.py createsuperuser` to create a super/admin user
-14. Start the application by running `python3 manage.py runserver`
+import os
+
+os.environ['SECRET_KEY'] = 'ADDED_BY_YOU'
+os.environ['DATABASE_URL'] = 'ADDED_BY_YOU'
+os.environ['CLOUDINARY_URL'] = 'ADDED_BY_YOU'
+
+7. Install Required Packages: Install the necessary packages specified in the requirements.txt file.
+
+8. Configure Database Settings: In the settings.py file, configure the connection to either the Heroku Postgres Database or the local SQLite database.
+
+9. Set Debug Mode: For local development, ensure that the DEBUG variable in the settings.py file is set to True.
+
+10. Allow Local Host: Add localhost and 127.0.0.1 to the ALLOWED_HOSTS variable in the settings.py file.
+
+11. Check Migrations: Verify the migration status by running python3 manage.py showmigrations.
+
+12. Migrate the Database: Execute python3 manage.py migrate to perform the necessary database migrations.
+
+13. Create Admin User: Use python3 manage.py createsuperuser to create a super/admin user for the application.
+
+14. Start the Application: Finally, start the application by running python3 manage.py runserver. This will launch the local development server.
+
+These steps will allow you to clone the repository and run the project locally with all the required configurations and dependencies.
 
 ## **Deployment to Heroku**
-EGNA ORD!!!!
-Deployment to Heroku can be done with the following guideline:
 
-1. Create an account on Heroku
-2. Create an app and give it the desired name and select a region
-3. <del>Under resources, search for Postgres, and add _Heroku Postgres_ database to the app</del>
-    * Due to changes taking place as from the 28/11/2022 with regards to Heroku and their PostgreSQL Add-on, student developers at Code Institute have had to migrate their project database to [ElephantSQL](https://www.elephantsql.com/).
-        1. Create an account on ElephantSQL.
-        2. Click on 'Create an instance'
-        3. Give your plan a Name, select the appropriate Plan and then select a region and data-center closest to your location.
-        4. Once details are completed, click 'Create instance'. 
-        5. Copy and paste dashboard `DATABASE_URL` and copy and paste into Heroku Config Vars in Settings, and be sure to set your `env.py` in your project IDE to the same URL. 
-4. The `DATABASE_URL` needs to be set as an environment variable in both Heroku and in the IDE local environment variables
-5. Create a `Procfile` with the following text: `web: gunicorn project_name.wsgi`
-6. Make sure you add your environment variables (env.py) to Heroku's Config Vars
-7. Ensure `Debug` is set to `False` in the settings.py file
-8. Add 'localhost', and 'project_name.herokuapp.com' to the `ALLOWED_HOSTS` variable in `settings.py`
-9. Run `python3 manage.py showmigrations` to check the status of the migrations
-10. Run `python3 manage.py migrate` to migrate any necessary data to the database
-11. Run `python3 manage.py createsuperuser` to create an admin user
-12. Connect the app to GitHub, and enable automatic deploys from main (or you can manually deploy).
-13. Click 'deploy' to deploy your application to Heroku for the first time
+1. Create a Heroku Account: Start by creating an account on Heroku.
+
+2. Create a New Heroku App: In your Heroku dashboard, create a new app and choose a suitable name for it. Additionally, select your desired region for hosting.
+
+3. Database Configuration: Due to changes in the PostgreSQL Add-on, it's recommended to use ElephantSQL for your project's database instead of Heroku Postgres. Follow these steps:
+
+4. Create an account on ElephantSQL.
+Click on 'Create an instance'.
+Provide a name for your plan, select the appropriate plan, choose a region, and data-center closest to your location.
+After filling out the details, click 'Create instance'.
+Copy the DATABASE_URL from your ElephantSQL dashboard and paste it into Heroku Config Vars in the app's Settings. Make sure your env.py in your project IDE also uses the same URL.
+Environment Variables: Ensure that the DATABASE_URL is set as an environment variable both in Heroku's Config Vars and your local IDE's environment variables.
+
+5. Create a Procfile: Generate a Procfile in your project directory with the following content: web: gunicorn project_name.wsgi.
+
+6. Config Vars: Add your environment variables (from env.py) to Heroku's Config Vars.
+
+7. Debug Mode: Set the DEBUG variable to False in the settings.py file.
+
+8. Allowed Hosts: Add 'localhost' and 'project_name.herokuapp.com' to the ALLOWED_HOSTS variable in the settings.py file.
+
+9. Check Migrations: Run python3 manage.py showmigrations to verify the status of your migrations.
+
+10. Migrate Data: Execute python3 manage.py migrate to perform the necessary data migration to the database.
+
+11. Create Admin User: Use python3 manage.py createsuperuser to create an admin user for the application.
+
+12. GitHub Integration: Connect your Heroku app to GitHub and enable automatic deploys from the 'main' branch. Alternatively, you can choose to manually deploy.
+
+13. Deploy: Click 'deploy' to initiate the deployment of your application to Heroku.
+
+By following these steps, you'll successfully deploy your project to Heroku, taking into consideration the necessary configurations and database changes.
 
 
 ## **Libraries and other credits**
