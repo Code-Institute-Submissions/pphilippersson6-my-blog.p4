@@ -33,9 +33,6 @@
 {{ post.body|safe }}
 
 <br><br>
-<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
-
-<br><br>
 <hr>
 <br>
 
@@ -57,25 +54,7 @@
         - {{ total_likes }} Likes
 </form>
 
-<br><br>
-<hr>
-<h2> Comments</h2>
-<br>
-{% if not post.comments.all %}
-    No Comments On This Post Yet <a href="#">
-    Add One </a>
-{% else %}
-        {% for comment in post.comments.all %}
-           <strong>
-                {{ comment.name }} - 
-                {{ comment.date_added}}
-            </strong>
-            <br>
-            {{ comment.body }}
-            <br><br>
-        {% endfor %}
-{% endif %}
-<hr>
+
 <br><br>
 
 <div class="card mb-3">
@@ -131,5 +110,33 @@
       </div>
     </div>
   </div>
+
+  <br>
+<h1> Comments</h1>
+<br>
+{% if not post.comments.all %}
+    No Comments On This Post Yet <a href="{% url 'add_comment' post.pk %}">
+    Add One </a>
+{% else %}
+
+<a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+
+<br><br>
+        {% for comment in post.comments.all %}
+           <strong>
+                {{ comment.name }} - 
+                {{ comment.date_added}}
+            </strong>
+            <br>
+
+            {{ comment.body }}
+            <br><br>
+
+        {% endfor %}
+        <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+{% endif %}
+<br>
+
+<br><br>
 
 {% endblock %}
