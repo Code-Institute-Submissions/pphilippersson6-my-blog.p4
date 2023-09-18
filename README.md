@@ -2,9 +2,11 @@
 
 ![am i respomnsive( LÄNK TILL BILD)]
 
-## About
-**My Blog** is a BESKRIVA MIN BLOGG HÄR
-Provide a brief introduction to your Django project. Explain what it does, its main features, and why it exists. You can also include any relevant badges here.
+## About 
+**My Blog** is a website application designed to post, edit, like and comment on others posts.
+You can also check the creators profile, and bio's.
+The purpose of the site is to share anything you want to share with others, It could be news,
+gaming, food, feelings, toughts, or whatever!you like!
 
 <u>Required tecgnologies:</u> 
 
@@ -20,7 +22,7 @@ Provide a brief introduction to your Django project. Explain what it does, its m
 
 
 ## Table of Contents
-
+SKA IICASFIXAS
 - [**My Blog**](#my-blog)
   - [Table of Contents](#table-of-contents)
   - [About](#about)
@@ -31,11 +33,6 @@ Provide a brief introduction to your Django project. Explain what it does, its m
 
 
 # **Project Purpose**
-
-My Blog is a website application designed to post, edit, like and comment on others posts.
-You can also check the creators profile, and bio.
-The purpose of the site is to share anything you want to share with others, It could be news,
-gamin, food, feelings, toughts, or whatever!you like!
 
 ## Target Audience
 
@@ -49,8 +46,7 @@ The target audience for this Django blog is broad and inclusive. The blog is des
 
 4. **Community Interaction**: Users who want to engage with the content by liking, commenting, and sharing posts.
 
-This blog is open to all, fostering a sense of community and collaboration. Whether you're a passionate writer, an avid reader, or simply looking to engage with interesting content, you're welcome to be a part of our blogging community.
-
+This blog is open for everyone, fostering a sense of community and collaboration. Whether you're a passionate writer, an avid reader, or simply looking to engage with interesting content, you're welcome to be a part of our blogging community.
 
 # **UX** 
 
@@ -89,7 +85,6 @@ so that **I can create a web application that handles media uploads and serves t
 * As an **admin**, I can view user profile information so that I can modify any needed user details or delete users.
 * As an **admin**, I can access an admin profile so that I can create, edit and delete users, or edit them.
 
-
 # **Design**
 
 ## **Website Structure**
@@ -98,8 +93,9 @@ so that **I can create a web application that handles media uploads and serves t
 * All of the pages extend the same base, therefore producing a consistent style across the web-app
 * Pages are the following:
     * **Navbar**
-    The navbar is structured up very easy for the user, with a button and the header "**My Blog**", dropdown menu with "**categories**", where all the blog-categories are stored. A "**Register**" button for new users, and a "**Login**" button for the ones with registerd accounts already. 
-    !!IMAGE LOGGED OUT
+    The navbar is structured up very easy for the user, with a button and the header "**My Blog**", dropdown menu with "**categories**", where all the blog-categories are stored. A "**Register**" button for new users, and a "**Login**" button for the ones with registerd accounts already.
+    ![navbar as logged out](static/readme_images/navbar logged out.png)
+    
     * If the user is logged in, the navbar says: same "**My Blog**" button, and "**Categories**" dropdown menu, but then we come to the "**Add Post**" followed by "**Add Category**" since you can do this stuff as logged in. To the right, we find another dropdown menu, where the user sees the profile-name, the dropdown menu has 4 links. "**User settings**", "**Edit Profile Page**", "**Show profile page**" and a "**Logout**" button. !!!! image logged in
     
     * **Footer**
