@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
      {% block title %}
-                 
+    
      {% endblock %}
     </title>
+    
+    <meta name="description" content="{% block meta_description %}Default Description{% endblock %}" />
+    
+    <!-- Author -->
+    <meta name="author" content="{{ post.author.first_name }} {{ post.author.last_name }}" />
+    
+    <!-- Published Date -->
+    <meta name="date" content="{{ post.post_date|date:"Y-m-d" }}" />
+    
+    <!-- Keywords (example) -->
+    <meta name="keywords" content="blog, Django, web development, programming" />
     
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
 
   </head>
   

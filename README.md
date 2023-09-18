@@ -96,56 +96,62 @@ so that **I can create a web application that handles media uploads and serves t
     The navbar is structured up very easy for the user, with a button and the header "**My Blog**", dropdown menu with "**categories**", where all the blog-categories are stored. A "**Register**" button for new users, and a "**Login**" button for the ones with registerd accounts already.
     ![navbar_as_logged_out](static/readme_images/navbar_logged_out.png)
     
-    * If the user is logged in, the navbar says: same "**My Blog**" button, and "**Categories**" dropdown menu, but then we come to the "**Add Post**" followed by "**Add Category**" since you can do this stuff as logged in. To the right, we find another dropdown menu, where the user sees the profile-name, the dropdown menu has 4 links. "**User settings**", "**Edit Profile Page**", "**Show profile page**" and a "**Logout**" button. !!!! image logged in
+    * If the user is logged in, the navbar says: same "**My Blog**" button, and "**Categories**" dropdown menu, but then we come to the "**Add Post**" followed by "**Add Category**" since you can do this stuff as logged in. To the right, we find another dropdown menu, where the user sees the profile-name, the dropdown menu has 4 links. "**User settings**", "**Edit Profile Page**", "**Show profile page**" and a "**Logout**" button. 
+    ![navbar_as_logged_in](static/readme_images/navbar_logged_in.png)
     
     * **Footer**
     The footer is a simple footer with copyright text, and 3 icons linked to social medias.
+    ![footer](static/readme_images/footer.PNG)
+    
 
     * **Homepage**
     Here can we see the most recent posts for the blog.
     We have a link to the post itself, and also links to the category.
+    ![homepage](static/readme_images/homepage.PNG)
 
     * **Categories**
     In the category navbar, we see all the categories created by the users.
     If we post a blogpost, and we use the category, it will appear under its correct category.
-    BILD PÅ KATEGORI MED NÅÅGOT I
+      ![categories](static/readme_images/categories_blog.png)
     
     * **Register** 
     This is a simple register form for the user to use, and it is created to assign a post by the user.
     Here, we want a username, first/last name, an email and a password.
-    BILD PÅ REGISTER SIDAN
+    ![register](static/readme_images/register_page.png)
+    
 
     * **Login**
     Here is a simple loginpage with username and password required. 
     If you dont have created an account yet, you can press the hyperlink Sign up Here, to get to the register page.
-
-    Biuld på LOGIN!!!
+    ![login](static/readme_images/login.png)
 
     ### As a logged in user
     
     * **Add Post**
     We can add a post, and then we enter a title, a title tag, choose a category that fits the post, and in the body, we type whatever we want to share!
     Then, we can post a header image. And then type a snippet for our post!
-    ADD IMG ADD POST
+    ![add_post](static/readme_images/add_post.png)
 
     * **Add Category**
     Very simple page, where you can add a category of anything, and it will appear in the **Categories** list aswell.
-
-    ADD CATEGORT IMG
+    ![add_category](static/readme_images/add_category.png)
 
     * **Edit page**
     Edit/Delete a post as the user who created the page!
+    ![edit_delete_post](static/readme_images/editdelete.png)
 
     * **Edit Profile**
     Here, you can edit your profile in the edit profile section
-    BUILD PÅ EDIT
+    ![]()
 
     * **Show Profile**
     Here, a user can see the profile name, and information like bio, and profile picture.
-
+     ![show_profile](static/readme_images/show_profile.png)
+     
     * **User settings**
     Is where you can edit username, email, see your last login, and if youre an admin, is active, or something like that.
-    
+    ![user_settings](static/readme_images/user_settings.png)
+
 ## **Relational Database**
 
 * The project uses a relational database called [PostgreSQL](https://www.elephantsql.com/)
@@ -194,14 +200,13 @@ total_likes(): A method that returns the total number of likes on the post.
 ## **Design**
 
 * **Wireframe**
-    * Design for landing page can be seen [here](/documents/readme_im/index.jpg).
-    * Design for event page can be seen [here](/documents/readme_imavent.jpg).
-
+    * skeleton-design for my blog [here](static/readme_images/WIREFRAME.png).
 
 ## **Color Design**
  * Navbar color is used from the bootstrap
  * The footer is also from bootstrap color #3e4551;, along with the icons at the footer. 
- 
+    ![icons](static/readme_images/icons.PNG)
+    
 
 # **Features**
 
@@ -211,6 +216,7 @@ total_likes(): A method that returns the total number of likes on the post.
 ## **Features to implement in the future**
 
 ## **CRUD Operations**
+
 | **Operations** | All users | Auth. Users | Superusers |
 | --- | --- | --- | --- |
 | **View Home Page** | Yes | Yes | Yes |
@@ -229,7 +235,6 @@ total_likes(): A method that returns the total number of likes on the post.
  * System will not allow non-registered users to create an account with a conflictive username or email.
  * System does not accept any username or password that is non-existent or incorrect.
 
-
 # **Technologies and libraries used**
 
 ## **Languages**
@@ -243,7 +248,6 @@ The languages used for this site are:
 
 ## **Database Platform and Cloud Storage**
 
-REDIGERA DENNA TILL MIN EGNA TEXT..-----
 * [ElephantSQL Postgres](https://www.elephantsql.com/)
   This is a SQL database service offered by ElephantSQL, which we use to store and manage our data. It provides a reliable and scalable database solution for our application.
 * [SQLite](https://www.sqlite.org/index.html)
@@ -257,7 +261,8 @@ REDIGERA DENNA TILL MIN EGNA TEXT..-----
 
 ## **Introduction**
 
-  Throughout the development stages of the website, we have conducted rigorous testing to ensure its quality and reliability. This testing process involved various methods and tools, including:
+  Throughout the development stages of the website, we have conducted rigorous testing to ensure its quality and reliability. 
+  This testing process involved various methods and tools, including:
   * Python Terminal for Backend Functionalities: We extensively used the Python terminal to test and validate the functionality of the backend of our website. This allowed us to interact directly with the backend components and ensure they were working as intended.
   * Google Developer Tools: Google Developer Tools played a crucial role in our testing process. It helped us inspect and debug the website's frontend components, ensuring that they were rendering correctly and functioning smoothly.
   * Manual Testing: Our team conducted thorough manual testing, where we interacted with the website as end-users would. This hands-on approach allowed us to identify any user interface issues, navigation problems, or functional glitches.
