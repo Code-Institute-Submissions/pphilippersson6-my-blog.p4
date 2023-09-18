@@ -3,14 +3,24 @@
 {% block content %}
 
 
-<h1>Login below</h1>
+<h1>Login Below</h1>
 <br/> <br/>
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p}}
-        <button class="btn btn-secondary">Login</button>
 
+<div class="mb-3">
+            <input type="text" class="form-control" name="username" placeholder="Username">     
 </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+<br>
+        <button class="btn btn-secondary">Login</button>
+</div>
+</form>
+<br>
+
+Not Registerd Yet? Sign Up <a href="{% url 'register' %}"> Here </a>
 
 {% endblock %}
