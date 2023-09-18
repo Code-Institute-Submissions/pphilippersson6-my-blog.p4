@@ -15,7 +15,7 @@ class CreateProfilePageView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super().form_class_valid(form)
+        return super().form_valid(form)
 
 class EditProfilePageView(generic.UpdateView):
     model = Profile
