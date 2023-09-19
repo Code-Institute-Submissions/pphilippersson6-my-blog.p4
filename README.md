@@ -442,7 +442,7 @@ By following these steps, you'll successfully deploy your project to Heroku, tak
 ## **Libraries and other credits**
 
 ### Images
-* [DefaultProfileimg](static/readme_images/defaultpicture.png)
+* [DefaultProfileimg](https://stock.adobe.com/search?k=default+profile) Borrowed image
 
 ### Content
 * [Code institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/) for inspiration, and help with readmefile
