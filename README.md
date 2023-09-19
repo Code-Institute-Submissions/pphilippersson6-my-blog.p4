@@ -20,16 +20,43 @@ gaming, food, feelings, toughts, or whatever!you like!
 * A test account details are shown here: Username: admintest Password: admintest
 
 
-
 ## Table of Contents
-SKA IICASFIXAS
+
 - [**My Blog**](#my-blog)
-  - [Table of Contents](#table-of-contents)
   - [About](#about)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+  - [Table of Contents](#table-of-contents)
+- [**Project Purpose**](#project-purpose)
+  - [Target Audience](#target-audience)
+- [**UX**](#ux)
+  - [**Project Scope**](#project-scope)
+  - [**User Stories**](#user-stories)
+- [**Design**](#design)
+  - [**Website Structure**](#website-structure)
+  - [**Relational Database**](#relational-database)
+  - [**Design**](#design-1)
+  - [**Color Design**](#color-design)
+- [**Features**](#features)
+  - [**Existing features**](#existing-features)
+  - [**Features to implement in the future**](#features-to-implement-in-the-future)
+  - [**CRUD Operations**](#crud-operations)
+- [**Data Validation**](#data-validation)
+- [**Technologies and libraries used**](#technologies-and-libraries-used)
+  - [**Languages**](#languages)
+  - [**Database Platform and Cloud Storage**](#database-platform-and-cloud-storage)
+- [**Testing**](#testing)
+  - [**Introduction**](#introduction)
+  - [**Testing Accessibility and Performance**](#testing-accessibility-and-performance)
+  - [Validator Testing](#validator-testing)
+  - [Lighthouse](#lighthouse)
+  - [**Code Validation**](#code-validation)
+- [**Bugs during development**](#bugs-during-development)
+  - [**Fixed bugs and solutions:**](#fixed-bugs-and-solutions)
+  - [**Ongoing bugs:**](#ongoing-bugs)
+- [**Development and deployment**](#development-and-deployment)
+  - [**Local Deployment**](#local-deployment)
+  - [**Deployment to Heroku**](#deployment-to-heroku)
+  - [**Libraries and other credits**](#libraries-and-other-credits)
+    - [Content](#content)
 
 
 # **Project Purpose**
@@ -125,7 +152,7 @@ so that **I can create a web application that handles media uploads and serves t
     If you dont have created an account yet, you can press the hyperlink Sign up Here, to get to the register page.
     ![login](static/readme_images/login.png)
 
-    ### As a logged in user
+    ## **As a logged in user**
     
     * **Add Post**
     We can add a post, and then we enter a title, a title tag, choose a category that fits the post, and in the body, we type whatever we want to share!
