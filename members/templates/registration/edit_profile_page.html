@@ -4,7 +4,7 @@
 
 
 {% if user.is_authenticated %}
-    {% if user.is_authenticated.id %}
+    {% if object.user.username == request.user.username %}
         <h1>Edit your profile</h1>
         <br><br>
         
