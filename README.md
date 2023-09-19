@@ -1,6 +1,6 @@
 # **My Blog**
 
-![am i respomnsive( LÄNK TILL BILD)]
+![Frontpage](static/readme_images/frontpage.png)
 
 ## About 
 **My Blog** is a website application designed to post, edit, like and comment on others posts.
@@ -53,6 +53,7 @@ gaming, food, feelings, toughts, or whatever!you like!
   - [**Local Deployment**](#local-deployment)
   - [**Deployment to Heroku**](#deployment-to-heroku)
   - [**Libraries and other credits**](#libraries-and-other-credits)
+    - [Images](#images)
     - [Content](#content)
 
 
@@ -439,6 +440,9 @@ By following these steps, you'll successfully deploy your project to Heroku, tak
 
 
 ## **Libraries and other credits**
+
+### Images
+* [DefaultProfileimg](static/readme_images/defaultpicture.png)
 
 ### Content
 * [Code institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PE_PAGPPF+2021_Q2/courseware/b3378fc1159e43e3b70916fdefdfae51/605f34e006594dc4ae19f5e60ec75e2e/) for inspiration, and help with readmefile
