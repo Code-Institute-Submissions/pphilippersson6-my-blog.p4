@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  
 
-ALLOWED_HOSTS = ['8000-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com', '8001-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['my-django-blog-p4-1247a09296f4.herokuapp.com', '8000-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com', '8001-pphilippersson6-my-blog-g87jtsns3h.us2.codeanyapp.com',]
+
 
 
 # Application definition
@@ -129,7 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

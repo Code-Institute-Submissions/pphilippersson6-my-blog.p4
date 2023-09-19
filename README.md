@@ -8,9 +8,6 @@ You can also check the creators profile, and bio's.
 The purpose of the site is to share anything you want to share with others, It could be news,
 gaming, food, feelings, toughts, or whatever!you like!
 
-<u>Required tecgnologies:</u> 
-
-
 **Test Accounts**
 
 * For the purposes of testing the website and its features, a test-account have been created(as an admin).
@@ -169,7 +166,7 @@ so that **I can create a web application that handles media uploads and serves t
 
     * **Edit Profile**
     Here, you can edit your profile in the edit profile section
-    ![]()
+    ![edit_profile](static/readme_images/editprofile.png)
 
     * **Show Profile**
     Here, a user can see the profile name, and information like bio, and profile picture.
